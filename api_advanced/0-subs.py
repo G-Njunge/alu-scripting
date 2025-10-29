@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-"""
-Reddit Subreddit Subscriber Counter
 
-This script retrieves and displays the number of subscribers for a given subreddit
-using Reddit's JSON API. It includes error handling for non-existent subreddits.
+#Reddit Subreddit Subscriber Counter
 
-Usage: python 0-subs.py <subreddit_name>
-Example: python 0-subs.py python
-"""
+#This script retrieves and displays the number of subscribers for a given subreddit
+#using Reddit's JSON API. It includes error handling for non-existent subreddits.
+
+#Usage: python 0-subs.py <subreddit_name>
+#Example: python 0-subs.py python
 
 import json
 import requests
