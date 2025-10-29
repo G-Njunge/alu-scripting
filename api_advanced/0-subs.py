@@ -43,16 +43,17 @@ def number_of_subscribers(subreddit):
         # Successfully found subreddit - extract subscriber count from nested JSON
         # Structure: response["data"]["subscribers"]
         subscribers = about_parsed.get("data",{}).get("subscribers")
+        return subscribers
     elif about.status_code == 404:
         # Subreddit doesn't exist - print error message and exit
         print("this_is_a_fake_subreddit")
+        return 0
         sys.exit(1)
     else:
         # Other HTTP errors - raise exception with status details
         about_parsed.raise_for_status()
+        sys.exit(1)
     
-    # Return the subscriber count
-    return subscribers
 
 # Main execution block - only runs when script is executed directly
 if __name__ == "__main__":
